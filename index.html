@@ -16,183 +16,294 @@
 
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">AN<span>.</span></a>
-      <div class="nav-links">
-        <a href="#impact">Impact</a>
-        <a href="#chine">Chine</a>
-        <a href="#skills">Compétences</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#" class="nav-logo" data-target="home">AN<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <button type="button" class="nav-btn active" data-target="home">Accueil</button>
+        <button type="button" class="nav-btn" data-target="impact">Impact</button>
+        <button type="button" class="nav-btn" data-target="chine">Stratégie · Chine</button>
+        <button type="button" class="nav-btn" data-target="skills">Compétences</button>
+        <button type="button" class="nav-btn nav-cta" data-target="contact">Contact</button>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
     </div>
   </nav>
 
-  <section class="hero" id="hero">
-    <canvas id="particles"></canvas>
-    <div class="hero-content">
-      <p class="hero-label reveal">Digital Product Manager · Data Analyst · Web Developer</p>
-      <h1 class="hero-title">
-        <span class="typewriter" id="typewriter"></span>
-      </h1>
-      <p class="hero-tagline reveal">
-        Transformer la créativité de <strong>SAY MEDIA</strong><br />
-        en revenus <span class="accent">mesurables</span>
-      </p>
-      <div class="hero-actions reveal">
-        <a href="#impact" class="btn btn-primary">Découvrir mon impact</a>
-        <a href="#contact" class="btn btn-ghost">Me contacter</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat">
-          <span class="stat-num" data-target="2">0</span>
-          <span class="stat-label">Expériences data & produit</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num" data-target="90">0</span>
-          <span class="stat-label">Jours pour structurer</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num" data-target="100">0</span>
-          <span class="stat-label">Prospects scorés (cible)</span>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-hint"><span></span></div>
-  </section>
+  <div class="mobile-menu" id="mobileMenu">
+    <button type="button" class="nav-btn" data-target="home">Accueil</button>
+    <button type="button" class="nav-btn" data-target="impact">Impact</button>
+    <button type="button" class="nav-btn" data-target="chine">Stratégie · Chine</button>
+    <button type="button" class="nav-btn" data-target="skills">Compétences</button>
+    <button type="button" class="nav-btn" data-target="contact">Contact</button>
+  </div>
 
-  <section class="section" id="impact">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">01 — Impact</span>
-        <h2>Ce que j'apporte à SAY MEDIA</h2>
-        <p>Trois leviers concrets pour accélérer le cash-flow et prouver les résultats.</p>
-      </div>
-      <div class="cards">
-        <article class="card glass reveal">
-          <div class="card-icon">01</div>
-          <h3>Prospection Data-Driven</h3>
-          <p>Pipeline structuré avec scoring, taux de conversion par étape et priorisation claire des 100 premiers prospects qualifiés.</p>
-          <ul>
-            <li>Fichier prospection + scoring</li>
-            <li>Entonnoir de conversion</li>
-            <li>Priorisation par potentiel</li>
-          </ul>
-        </article>
-        <article class="card glass reveal">
-          <div class="card-icon">02</div>
-          <h3>Dashboard automatisé</h3>
-          <p>ROI, CTR, CPA et Score Santé calculés automatiquement. La direction voit en un coup d'œil ce qui marche et ce qui fuit.</p>
-          <ul>
-            <li>KPI en temps réel</li>
-            <li>Alertes conditionnelles</li>
-            <li>Reporting client prouvé</li>
-          </ul>
-        </article>
-        <article class="card glass reveal">
-          <div class="card-icon">03</div>
-          <h3>Pont Cameroun ⇄ Chine</h3>
-          <p>Mon départ devient un avantage : sourcing d'agences d'import-export chinoises, coûts modérés, résultats visibles dès le premier essai.</p>
-          <ul>
-            <li>Partenaires import-export</li>
-            <li>Canaux TikTok / IG / FB</li>
-            <li>Revenus internationaux</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="chine">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">02 — Stratégie</span>
-        <h2>Le pont vers la Chine</h2>
-        <p>Une mobilité transformée en source de revenus récurrents pour SAY MEDIA.</p>
-      </div>
-      <div class="timeline">
-        <div class="timeline-line"></div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">Étape 1</span>
-            <h3>Avant le départ</h3>
-            <p>Structuration des process, transfert de méthodes, formation de l'équipe et mise en place des outils (pipeline + dashboard).</p>
+  <main id="app">
+    <section class="view active" id="view-home" data-view="home">
+      <div class="hero">
+        <canvas id="particles"></canvas>
+        <div class="hero-content">
+          <p class="hero-label">Digital Product Manager · Data Analyst · Web Developer</p>
+          <h1 class="hero-title"><span class="typewriter" id="typewriter"></span></h1>
+          <p class="hero-tagline">
+            Transformer la créativité de <strong>SAY MEDIA</strong><br />
+            en revenus <span class="accent">mesurables</span>
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" data-target="impact">Découvrir mon impact</button>
+            <button type="button" class="btn btn-ghost" data-target="chine">Voir le pont Chine</button>
           </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">Étape 2</span>
-            <h3>En Chine</h3>
-            <p>Sourcing d'agences d'import-export qui sponsorisent déjà sur TikTok, Instagram et Facebook de façon basique. Reporting asynchrone et suivi des KPIs.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">Étape 3</span>
-            <h3>Résultats</h3>
-            <p>Partenaire pro, coûts modérés, visibilité dès le 1er essai. Objectif : 3 contrats / mois à 6 mois, jusqu'à 15+ à 24 mois.</p>
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-num" data-target-num="2">0</span><span class="stat-label">Expériences data & produit</span></div>
+            <div class="stat"><span class="stat-num" data-target-num="90">0</span><span class="stat-label">Jours pour structurer</span></div>
+            <div class="stat"><span class="stat-num" data-target-num="100">0</span><span class="stat-label">Prospects scorés (cible)</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">03 — Compétences</span>
-        <h2>Stack technique & métier</h2>
-        <p>Des outils au service du business, pas l'inverse.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill reveal">
-          <div class="skill-header"><span>SQL</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+    <section class="view" id="view-impact" data-view="impact">
+      <div class="view-inner">
+        <div class="section-header">
+          <span class="section-tag">01 — Impact</span>
+          <h2>Ce que j'apporte à SAY MEDIA</h2>
+          <p>Trois leviers concrets pour accélérer le cash-flow et prouver les résultats.</p>
         </div>
-        <div class="skill reveal">
-          <div class="skill-header"><span>Tableau / Data Viz</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-header"><span>Google Analytics</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-header"><span>HTML / CSS / JS</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-header"><span>Product Management</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-header"><span>KPI & Reporting</span><span class="skill-pct">92%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        <div class="cards">
+          <article class="card glass">
+            <div class="card-icon">01</div>
+            <h3>Prospection Data-Driven</h3>
+            <p>Pipeline structuré avec scoring, taux de conversion par étape et priorisation claire des 100 premiers prospects qualifiés.</p>
+            <ul><li>Fichier prospection + scoring</li><li>Entonnoir de conversion</li><li>Priorisation par potentiel</li></ul>
+          </article>
+          <article class="card glass">
+            <div class="card-icon">02</div>
+            <h3>Dashboard automatisé</h3>
+            <p>ROI, CTR, CPA et Score Santé calculés automatiquement. La direction voit en un coup d'œil ce qui marche.</p>
+            <ul><li>KPI en temps réel</li><li>Alertes conditionnelles</li><li>Reporting client prouvé</li></ul>
+          </article>
+          <article class="card glass">
+            <div class="card-icon">03</div>
+            <h3>Pont Cameroun ⇄ Chine</h3>
+            <p>Mon départ devient un avantage : sourcing d'agences d'import-export chinoises, coûts modérés, résultats visibles dès le 1er essai.</p>
+            <ul><li>Partenaires import-export</li><li>Canaux TikTok / IG / FB</li><li>Revenus internationaux</li></ul>
+            <button type="button" class="btn btn-ghost btn-sm" data-target="chine">Explorer la stratégie →</button>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer" id="contact">
-    <div class="container">
-      <div class="footer-cta reveal">
-        <h2>Je ne viens pas seulement gérer des campagnes.</h2>
-        <p>Je viens installer un système qui prouve les résultats<br />et ouvre SAY MEDIA au marché chinois.</p>
-        <div class="footer-actions">
-          <a href="mailto:youmbijames@gmail.com" class="btn btn-primary">Écrire un email</a>
-          <a href="https://linkedin.com/in/arthur-nadjo-youmbi" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    <section class="view" id="view-chine" data-view="chine">
+      <div class="view-inner chine-view">
+        <div class="section-header">
+          <span class="section-tag">02 — Stratégie Chine</span>
+          <h2>Le pont Cameroun ⇄ Chine</h2>
+          <p>Une mobilité transformée en source de revenus récurrents pour SAY MEDIA.</p>
+        </div>
+
+        <div class="chine-block">
+          <h3 class="block-title">Timeline interactive</h3>
+          <p class="block-sub">Cliquez sur une étape pour afficher les détails et les chiffres.</p>
+          <div class="tl-tabs">
+            <button type="button" class="tl-tab active" data-tl="1">1 · Avant le départ</button>
+            <button type="button" class="tl-tab" data-tl="2">2 · En Chine</button>
+            <button type="button" class="tl-tab" data-tl="3">3 · Résultats</button>
+          </div>
+          <div class="tl-panels">
+            <div class="tl-panel active" id="tl-1">
+              <div class="tl-panel-grid">
+                <div>
+                  <h4>Structuration & transfert</h4>
+                  <p>Avant mon départ, je structure les process, forme l'équipe et installe les outils pour que tout tourne sans dépendance.</p>
+                  <ul class="tl-list">
+                    <li>Pipeline prospection + scoring opérationnel</li>
+                    <li>Dashboard ROI / CTR / CPA livré</li>
+                    <li>Process de reporting documenté</li>
+                    <li>Formation interne sur les KPIs</li>
+                  </ul>
+                </div>
+                <div class="tl-metrics">
+                  <div class="metric"><span class="metric-val">90</span><span class="metric-lbl">jours de structuration</span></div>
+                  <div class="metric"><span class="metric-val">100%</span><span class="metric-lbl">process documentés</span></div>
+                  <div class="metric"><span class="metric-val">1</span><span class="metric-lbl">dashboard opérationnel</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-panel" id="tl-2">
+              <div class="tl-panel-grid">
+                <div>
+                  <h4>Sourcing & pont commercial</h4>
+                  <p>Sur place, j'identifie les agences d'import-export qui sponsorisent déjà de façon basique et je les oriente vers SAY MEDIA.</p>
+                  <ul class="tl-list">
+                    <li>Cartographie des annonceurs actifs sur TikTok / IG / FB</li>
+                    <li>Pitch packs Présence / Visibilité / Premium</li>
+                    <li>Reporting asynchrone hebdomadaire</li>
+                    <li>Suivi KPIs à distance</li>
+                  </ul>
+                </div>
+                <div class="tl-metrics">
+                  <div class="metric"><span class="metric-val">5+</span><span class="metric-lbl">canaux ciblés</span></div>
+                  <div class="metric"><span class="metric-val">3</span><span class="metric-lbl">contrats / mois (cible 6 mois)</span></div>
+                  <div class="metric"><span class="metric-val">async</span><span class="metric-lbl">reporting continu</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-panel" id="tl-3">
+              <div class="tl-panel-grid">
+                <div>
+                  <h4>Résultats & montée en charge</h4>
+                  <p>SAY MEDIA devient le partenaire pro des exportateurs chinois vers l'Afrique : coûts modérés, résultats visibles dès le premier essai.</p>
+                  <ul class="tl-list">
+                    <li>Contrats récurrents à forte marge</li>
+                    <li>Preuves ROI dès le 1er mois</li>
+                    <li>Réseau élargi Cameroun ⇄ Chine</li>
+                    <li>Relais de croissance international</li>
+                  </ul>
+                </div>
+                <div class="tl-metrics">
+                  <div class="metric"><span class="metric-val">3</span><span class="metric-lbl">contrats / mois à 6 mois</span></div>
+                  <div class="metric"><span class="metric-val">8</span><span class="metric-lbl">contrats / mois à 12 mois</span></div>
+                  <div class="metric"><span class="metric-val">15+</span><span class="metric-lbl">contrats / mois à 24 mois</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ MODIFIABLE : noms des sociétés chinoises exemples -->
+        <div class="chine-block">
+          <h3 class="block-title">Opportunités — Agences & exportateurs</h3>
+          <p class="block-sub">Exemples de profils d'entreprises chinoises susceptibles d'acheter de la médiatisation en Afrique.</p>
+          <div class="opp-grid" id="oppGrid">
+            <article class="opp-card glass" data-company="guangzhou">
+              <div class="opp-badge">Import-Export</div>
+              <h4>Guangzhou Trade Co.</h4>
+              <p class="opp-sector">Électronique grand public · Afrique de l'Ouest</p>
+              <p>Exporte déjà smartphones et accessoires vers le Cameroun et le Nigeria. Sponsoring basique sur Facebook Ads.</p>
+              <div class="opp-tags"><span>Facebook</span><span>Instagram</span></div>
+              <button type="button" class="btn btn-ghost btn-sm opp-btn" data-case="guangzhou">Voir le cas d'usage</button>
+            </article>
+            <article class="opp-card glass" data-company="shenzhen">
+              <div class="opp-badge">Import-Export</div>
+              <h4>Shenzhen Import Group</h4>
+              <p class="opp-sector">Mode & textile · Douala hub</p>
+              <p>Volume élevé de conteneurs vers Douala. Cherche de la notoriété locale pour ses marques blanches.</p>
+              <div class="opp-tags"><span>TikTok</span><span>Instagram</span></div>
+              <button type="button" class="btn btn-ghost btn-sm opp-btn" data-case="shenzhen">Voir le cas d'usage</button>
+            </article>
+            <article class="opp-card glass" data-company="yiwu">
+              <div class="opp-badge">Trading</div>
+              <h4>Yiwu Africa Connect</h4>
+              <p class="opp-sector">Bazar & wholesale · Multi-pays</p>
+              <p>Plateforme B2B qui relie les grossistes africains aux usines. Besoin de contenu et de leads qualifiés.</p>
+              <div class="opp-tags"><span>LinkedIn</span><span>Facebook</span></div>
+              <button type="button" class="btn btn-ghost btn-sm opp-btn" data-case="yiwu">Voir le cas d'usage</button>
+            </article>
+            <article class="opp-card glass" data-company="foshan">
+              <div class="opp-badge">Industrie</div>
+              <h4>Foshan Home & Build</h4>
+              <p class="opp-sector">Meubles & BTP · Immobilier</p>
+              <p>Fournit le marché immobilier camerounais. Campagnes Instagram pour showrooms et partenaires locaux.</p>
+              <div class="opp-tags"><span>Instagram</span><span>TikTok</span></div>
+              <button type="button" class="btn btn-ghost btn-sm opp-btn" data-case="foshan">Voir le cas d'usage</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-modal" id="caseModal" hidden>
+          <div class="case-modal-backdrop" id="caseClose"></div>
+          <div class="case-modal-box glass">
+            <button type="button" class="case-close" id="caseCloseBtn" aria-label="Fermer">×</button>
+            <div id="caseContent"></div>
+          </div>
+        </div>
+
+        <div class="chine-block">
+          <h3 class="block-title">Impact visuel — Campagnes en action</h3>
+          <p class="block-sub">Mockups CSS : ce que voit un client chinois quand SAY MEDIA prouve les résultats.</p>
+          <div class="mockups">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="ig-header"><span class="ig-avatar"></span><span class="ig-name">saymedia.cm</span></div>
+                <div class="ig-post" style="background: linear-gradient(135deg, #1a1a2e, #16213e);"></div>
+                <div class="ig-stats">
+                  <div class="ig-stat"><strong id="countLikes">0</strong> j'aime</div>
+                  <div class="ig-stat"><strong id="countViews">0</strong> vues</div>
+                </div>
+                <div class="ig-caption">Campagne Visibilité+ · Hôtel Palm Beach · ROI +260%</div>
+              </div>
+            </div>
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="tk-header">TikTok Ads</div>
+                <div class="tk-chart">
+                  <div class="bar" style="--h:40%"></div>
+                  <div class="bar" style="--h:65%"></div>
+                  <div class="bar" style="--h:55%"></div>
+                  <div class="bar" style="--h:90%"></div>
+                  <div class="bar" style="--h:75%"></div>
+                  <div class="bar" style="--h:100%"></div>
+                </div>
+                <div class="tk-kpis">
+                  <div><span class="tk-kpi-val">4.2%</span><span class="tk-kpi-lbl">CTR</span></div>
+                  <div><span class="tk-kpi-val">5.5k</span><span class="tk-kpi-lbl">CPA (FCFA)</span></div>
+                  <div><span class="tk-kpi-val">+290%</span><span class="tk-kpi-lbl">ROI</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="desktop-mock">
+              <div class="desktop-bar"><span></span><span></span><span></span></div>
+              <div class="desktop-body">
+                <div class="dash-row">
+                  <div class="dash-card"><span class="dash-label">ROI Global</span><span class="dash-val cyan">291%</span></div>
+                  <div class="dash-card"><span class="dash-label">CTR Moyen</span><span class="dash-val">4.0%</span></div>
+                  <div class="dash-card"><span class="dash-label">Conversions</span><span class="dash-val">188</span></div>
+                </div>
+                <div class="dash-chart-line">
+                  <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                    <polyline points="0,50 30,42 60,45 90,28 120,32 150,15 180,18 200,8" fill="none" stroke="#00f3ff" stroke-width="2"/>
+                  </svg>
+                </div>
+                <p class="dash-caption">Dashboard SAY MEDIA — preuve de résultats pour le client</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>Arthur Jeremie NADJO YOUMBI · Douala · Remote Ready</p>
-        <p class="footer-status"><span class="dot"></span> Disponible immédiatement</p>
+    </section>
+
+    <section class="view" id="view-skills" data-view="skills">
+      <div class="view-inner">
+        <div class="section-header">
+          <span class="section-tag">03 — Compétences</span>
+          <h2>Stack technique & métier</h2>
+          <p>Des outils au service du business, pas l'inverse.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill"><div class="skill-header"><span>SQL</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+          <div class="skill"><div class="skill-header"><span>Tableau / Data Viz</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-header"><span>Google Analytics</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+          <div class="skill"><div class="skill-header"><span>HTML / CSS / JS</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill"><div class="skill-header"><span>Product Management</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+          <div class="skill"><div class="skill-header"><span>KPI & Reporting</span><span class="skill-pct">92%</span></div><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <section class="view" id="view-contact" data-view="contact">
+      <div class="view-inner contact-view">
+        <div class="footer-cta">
+          <h2>Je ne viens pas seulement gérer des campagnes.</h2>
+          <p>Je viens installer un système qui prouve les résultats<br />et ouvre SAY MEDIA au marché chinois.</p>
+          <div class="footer-actions">
+            <a href="mailto:youmbijames@gmail.com" class="btn btn-primary">Écrire un email</a>
+            <a href="https://linkedin.com/in/arthur-nadjo-youmbi" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+          </div>
+          <p class="footer-status"><span class="dot"></span> Disponible immédiatement · Douala · Remote Ready</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
